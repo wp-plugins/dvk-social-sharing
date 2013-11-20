@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: DvanKooten
 Donate link: http://dannyvankooten.com/donate/
-Tags: social, social media, sharing, buttons
+Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
 Tested up to: 3.7.1
 Stable tag: 1.0
@@ -14,18 +14,19 @@ Adds very simple social sharing buttons for Twitter, Facebook and Google+ to the
 
 = Social Sharing By Danny =
 
-The simplest sharing buttons possible for Twitter, Facebook and Google+. 
+The simplest sharing links possible for Twitter, Facebook and Google+. 
 
-The buttons are actually plain text links and require zero external scripts to be loaded. It makes no sense to load over 50kb of scripts for a feature 95% of your users will not use.
+From itself, the buttons are actually plain text links which require <strong>NO external scripts</strong>. It makes no sense to load over 50 kilobytes of scripts and styles for a functionality 95% of your users will not use.
 
-The plugin comes with a very simple CSS and JS file (both under 1KB) which add icons and a pop-up functionality to the links, so users do not have to leave your website to share your posts.
+The plugin comes with a very simple CSS and JS file (both under 1KB) which add icons and a pop-up functionality to the plain-text links, so users do not have to leave your website to share your posts. Both can be disabled from the setting page, offering you a lot of flexibility.
 
 **Plugin Features**
 
-- Sharing links for Twitter, Facebook and Google+, automatically added to all single posts.
+- Sharing links for Twitter, Facebook and Google+
 - Simple icon styles with a hover effect
-- Simple JavaScript of just 600 bytes (not jQuery dependent) which will make the link open in a pop-up window. 
+- Simple script of just 600 bytes (not jQuery dependent) which will make the links open in a pop-up window. 
 - A shortcode and a template function to display the buttons anywhere you want.
+- An overridable filter to set the condition for when to display the sharing links.
 
 == Frequently Asked Questions ==
 
@@ -88,7 +89,7 @@ The Twitter username to add to tweets. This will override the value from the set
 
 The social media buttons to show. You can also use this to change the order of the buttons. Defaults to `twitter, facebook, googleplus`, which are the only 3 possible values.
 
-= Screenshots =
+== Screenshots ==
 
 1. Simple but beautiful sharing links add the end of your posts. 
 2. Disable of the CSS to create your own styles.
