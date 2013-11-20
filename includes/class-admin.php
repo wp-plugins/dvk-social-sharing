@@ -7,7 +7,7 @@ class DVKSS_Admin {
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
 		add_action( 'admin_menu', array( $this, 'add_menu_item' ) );
 
-		add_filter( "plugin_action_links_dvk-social-sharing/dvk-social-sharing.php", array( $this, 'add_settings_link' ) );
+		add_filter( "plugin_action_links_dvk-social-sharing/index.php", array( $this, 'add_settings_link' ) );
 
 		if ( isset( $_GET['page'] ) && $_GET['page'] == 'dvkss' ) {
 			// load css
@@ -33,7 +33,7 @@ class DVKSS_Admin {
 	}
 
 	public function add_settings_link( $links ) {
-		$settings_link = '<a href="options-general.php?page=rfbp">'. __('Settings', 'recent-facebook-posts') . '</a>';
+		$settings_link = '<a href="options-general.php?page=dvkss">'. __('Settings') . '</a>';
 		array_unshift( $links, $settings_link );
 
 		return $links;

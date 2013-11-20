@@ -4,7 +4,7 @@ Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
 Tested up to: 3.7.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,6 +110,11 @@ The social media buttons to show. You can also use this to change the order of t
 Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk-social-sharing/faq/) section for some examples of additional customization.
 
 == Changelog ==
+
+= 1.0.1 - November 20, 2013 =
+
+- Fixed: added settings link to plugins overview page
+- Fixed: "tweet about" option in admin now tweets about the correct plugin. 
 
 = 1.0 - November 17, 2013 =
 

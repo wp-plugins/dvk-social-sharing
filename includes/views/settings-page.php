@@ -105,7 +105,7 @@
 			<ul class="ul-square">
 				<li><a href="http://wordpress.org/support/view/plugin-reviews/dvk-social-sharing?rate=5#postform" target="_blank">Leave a &#9733;&#9733;&#9733;&#9733;&#9733; review on WordPress.org</a></li>
 				<li><a href="http://dannyvankooten.com/wordpress-plugins/dvk-social-sharing/" target="_blank">Link to the plugin page from your blog</a></li>
-				<li><a href="http://twitter.com/?status=I%20show%20recent%20facebook%20posts%20on%20my%20%23WordPress%20site%20using%20Recent%20Facebook%20Posts%20by%20%40DannyvanKooten%20-%20love%20it!%20http%3A%2F%2Fwordpress.org%2Fplugins%2Fdvk-social-sharing%2F" target="_blank">Tweet about Recent Facebook Posts</a></li>
+				<li><a href="http://twitter.com/intent/tweet/?text=<?php echo urlencode('I am using Social Sharing by Danny to show sharing options on my WordPress site. It\'s great!'); ?>&via=DannyvanKooten&url=<?php echo urlencode('http://wordpress.org/plugins/dvk-social-sharing/'); ?>" target="_blank">Tweet about Social Sharing by Danny</a></li>
 				<li><a href="http://wordpress.org/plugins/dvk-social-sharing/#compatibility">Vote "works" on the WordPress.org plugin page</a></li>
 			</ul>
 		</div>
