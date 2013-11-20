@@ -4,7 +4,7 @@ Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
 Tested up to: 3.7.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,20 @@ You can have the plugin load two very small files to add icons and a pop-up func
 - Simple script of just 600 bytes (not jQuery dependent) which will make the links open in a pop-up window. 
 - A shortcode and a template function to display the buttons anywhere you want.
 - An overridable filter to set the condition for when to display the sharing links.
+- Translation ready
+
+**Translations**
+
+- English (en_US) - Danny
+- Dutch (nl_NL) - Danny
+- Looking for more translations..
+
+If you have created your own language pack, or have an update of an existing one, you can send [gettext PO and MO files](http://codex.wordpress.org/Translating_WordPress) to me so that I can bundle it into Social Sharing by Danny. You can [download the latest PO file here](http://plugins.svn.wordpress.org/dvk-social-sharing/trunk/languages/dvk-social-sharing.po).
+
+**More information**
+
+- [Social Sharing by Danny](http://dannyvankooten.com/wordpress-plugins/social-sharing-by-danny/)
+- Check out more [WordPress plugins](http://dannyvankooten.com/wordpress-plugins/) by Danny
 
 == Frequently Asked Questions ==
 
@@ -59,11 +73,7 @@ Use the `dvkss_display` filter to show the links in more places.
 *Example 1: will add the sharing links to everything possible*
 
 `
-function my_display_condition() {
-	return true;
-}
-
-add_filter('dvkss_display', 'my_display_condition');
+add_filter('dvkss_display', '__return_true');
 `
 
 *Example 2: will add the sharing links to all single posts, pages and other post types.*
@@ -83,13 +93,23 @@ add_filter('dvkss_display', 'my_display_condition');
 
 The element to use as the wrapping element. Defaults to `p`, a paragraph element.
 
-**twitter_username**
+**twitter_username** (string)
 
 The Twitter username to add to tweets. This will override the value from the settings page.
 
 **social_options** (comma separated string)
 
 The social media buttons to show. You can also use this to change the order of the buttons. Defaults to `twitter, facebook, googleplus`, which are the only 3 possible values.
+
+**before_text**  (string)
+
+The text to show before the links. This will override the value in the settings page.
+
+**twitter_text** (string)
+**facebook_text** (string)
+**googleplus_text** (string)
+
+The texts for the different links. Defaults to the string set in the translation file.
 
 == Screenshots ==
 
@@ -111,9 +131,14 @@ Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk
 
 == Changelog ==
 
+= 1.0.2 - November 20, 2013 =
+
+- Added: Dutch translation
+- Added: Option to change the text that shows before the sharing links.
+
 = 1.0.1 - November 20, 2013 =
 
-- Fixed: added settings link to plugins overview page
+- Fixed: Added settings link to plugins overview page
 - Fixed: "tweet about" option in admin now tweets about the correct plugin. 
 
 = 1.0 - November 17, 2013 =

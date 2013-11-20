@@ -14,6 +14,16 @@
 
 				<tr valign="top">
 					<th scope="row">
+						<?php _e('Text before links', 'dvk-social-sharing'); ?>
+					</th>
+					<td>
+						<input type="text" name="dvk_social_sharing[before_text]" id="dvkss_text" class="widefat" value="<?php echo esc_attr($opts['before_text']); ?>">
+						<small><?php _e('The text to show before the sharing links.', 'dvk-social-sharing'); ?></small>
+					</td>
+				</tr>
+
+				<tr valign="top">
+					<th scope="row">
 						<?php _e('Auto-add sharing links?', 'dvk-social-sharing'); ?>
 					</th>
 					<td>

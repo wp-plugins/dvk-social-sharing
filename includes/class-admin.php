@@ -25,7 +25,7 @@ class DVKSS_Admin {
 	}
 
 	public function sanitize_settings($settings) {
-
+		$settings['text'] = strip_tags($settings['text'], '<a><br><strong><i><em><b><span>');
 		$settings['icon_size'] = trim( absint ( $settings['icon_size'] ) );
 		$settings['twitter_username'] = trim( strip_tags( $settings['twitter_username'] ) );
 

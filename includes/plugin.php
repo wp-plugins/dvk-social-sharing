@@ -11,7 +11,8 @@ function dvkss_get_options()
 			'load_popup_js' => 1,
 			'icon_size' => 32,
 			'twitter_username' => '',
-			'auto_add' => 1			
+			'auto_add' => 1,
+			'before_text' => "Share this post: "		
 		);
 
 		// get options from db
@@ -28,3 +29,9 @@ function dvkss_get_options()
 
 	return $options;
 }
+
+function dvkss_load_textdomain() {
+	load_plugin_textdomain( 'dvk-social-sharing', false, 'dvk-social-sharing/languages/' );
+}
+
+add_action('plugins_loaded', 'dvkss_load_textdomain');
