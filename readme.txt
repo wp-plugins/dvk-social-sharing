@@ -16,9 +16,15 @@ Adds very simple social sharing buttons for Twitter, Facebook and Google+ to the
 
 The simplest sharing links possible for Twitter, Facebook and Google+. 
 
+Most social sharing plugins are too ugly, heavy, complicated or poorly coded for my liking. This plugin aims to be different. Simple, lightweight and flexible.
+
+= No script dependencies =
+
 From itself, the buttons are actually plain text links which require <strong>NO external scripts</strong>. It makes no sense to load over 50 kilobytes of scripts and styles for a functionality 95% of your users will not use.
 
-The plugin comes with a very simple CSS and JS file (both under 1KB) which add icons and a pop-up functionality to the plain-text links, so users do not have to leave your website to share your posts. Both can be disabled from the setting page, offering you a lot of flexibility.
+= Simple yet pretty & user-friendly  =
+
+You can have the plugin load two very small files to add icons and a pop-up functionality to the sharing links. This way, users do not have to leave your website after clicking a sharing option. Loading of both files can be disabled so you can craft your own styles.
 
 **Plugin Features**
 
@@ -29,10 +35,6 @@ The plugin comes with a very simple CSS and JS file (both under 1KB) which add i
 - An overridable filter to set the condition for when to display the sharing links.
 
 == Frequently Asked Questions ==
-
-= Another sharing plugin, really? =
-
-Yes. Most sharing plugins in the WordPress plugin repository are over-complicated, ugly, poorly coded or just too heavy for my liking. This plugin is simple, flexible and extremely lightweight. 
 
 = Can I display the sharing buttons using a shortcode? =
 
@@ -92,7 +94,7 @@ The social media buttons to show. You can also use this to change the order of t
 == Screenshots ==
 
 1. Simple but beautiful sharing links add the end of your posts. 
-2. Disable of the CSS to create your own styles.
+2. Disable the default plugin CSS to create your own styles.
 2. The settings page of the plugin. 
 
 == Installation ==
