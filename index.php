@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Social Sharing by Danny
-Version: 1.0.3
+Version: 1.0.4
 Plugin URI: http://dannyvankooten.com/
 Description: Adds super lightweight (no-scripts) social share buttons to your posts.
 Author: Danny van Kooten
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define("DVKSS_VERSION", "1.0.3");
+define("DVKSS_VERSION", "1.0.4");
 define("DVKSS_PLUGIN_DIR", plugin_dir_path(__FILE__)); 
 define("DVKSS_PLUGIN_URL", plugins_url( '/' , __FILE__ ));
 

@@ -33,7 +33,7 @@ function dvk_social_sharing($args = array()) {
         		break;
 
         		case 'facebook':
-        			?><a rel="external nofollow" class="ss-facebook" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo $url; ?>&p[images][0]=&p[title]=<?php echo $title; ?>" target="_blank" ><span class="ss-icon-facebook"></span><?php echo $facebook_text; ?></a> <?php
+        			?><a rel="external nofollow" class="ss-facebook" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo $url; ?>&p[title]=<?php echo $title; ?>" target="_blank" ><span class="ss-icon-facebook"></span><?php echo $facebook_text; ?></a> <?php
         		break;
 
         		case 'googleplus':

@@ -15,7 +15,7 @@
 		var popup = window.open(
 			target.href, 
 			'social',
-			'width=500,height=500,left='+ left +',top='+ top +',location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1'
+			'width=550,height=420,left='+ left +',top='+ top +',location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1'
 		);
 
 		if(popup) {

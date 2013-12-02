@@ -19,7 +19,7 @@ class DVKSS_Public {
 		}
 
 		if($opts['load_popup_js']) {
-			wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/script.js', array(), DVKSS_VERSION, true );
+			wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/script.min.js', array(), DVKSS_VERSION, true );
 		}
 	}
 
