@@ -20,11 +20,11 @@
 
 		if(popup) {
 			popup.focus();
-			if(e.preventDefault) e.preventDefault();
-			e.returnValue = false;
+			e.preventDefault();
+			return false;
 		}
 
-		return !!popup;
+		return true;
 	}
 
 })();

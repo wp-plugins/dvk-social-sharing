@@ -34,4 +34,10 @@ function dvkss_load_textdomain() {
 	load_plugin_textdomain( 'dvk-social-sharing', false, 'dvk-social-sharing/languages/' );
 }
 
-add_action('plugins_loaded', 'dvkss_load_textdomain');
+function dvkss_no_direct_access() {
+	if( ! defined("ABSPATH") ) {
+		header( 'HTTP/1.0 403 Forbidden' );
+		header( 'X-Robots-Tag: noindex' );
+		exit;
+	}
+}
