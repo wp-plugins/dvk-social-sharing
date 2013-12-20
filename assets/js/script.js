@@ -2,7 +2,7 @@
 
 	var links = document.querySelectorAll('.dvk-social-sharing a');
     for (var i = 0; i < links.length; i++) {
-		links[i].onclick = social_popup;
+		links[i].addEventListener("click", social_popup, false);
     }
 
 	function social_popup(e)

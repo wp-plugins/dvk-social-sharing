@@ -4,7 +4,7 @@ Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
 Tested up to: 3.8
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,9 @@ The texts for the different links. Defaults to the string set in the translation
 Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk-social-sharing/faq/) section for some examples of additional customization.
 
 == Changelog ==
+
+= 1.0.6 - December 20, 2013 =
+- Improved: Pop-up JS now used addEventListener to enable multiple event listeners (like a Google Analytics plugin) attaching to the sharing links.
 
 = 1.0.5 - December 9, 2013 =
 - Added: French translations, thanks to [Said](http://www.ninapeople.com/)
