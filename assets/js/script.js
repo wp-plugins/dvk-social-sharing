@@ -1,16 +1,23 @@
-(function() {
+function DVKSS() {
 
-	var links = document.querySelectorAll('.dvk-social-sharing a');
-    for (var i = 0; i < links.length; i++) {
-		if (links[i].attachEvent) {
-		 	links[i].attachEvent('onclick', social_popup);
+	function addEvent(eventName, callback) {
+		if (window.addEventListener) {
+			window.addEventListener(eventName, callback, false);
 		} else {
-		 	links[i].addEventListener("click", social_popup, false);
-		}		
-    }
+			window.attachEvent("on" + eventName, callback);
+		}
+	}
 
-	function social_popup(e)
-	{
+	// init
+	function init() {
+		var links = document.querySelectorAll('.dvk-social-sharing a');
+	    for (var i = 0; i < links.length; i++) {
+			DVKSS.addEvent('click', DVKSS.popup)
+	    }
+	}
+
+	// functions
+	function openPopup(e) {
 		var top = (screen.availHeight - 500) / 2;
 		var left = (screen.availWidth - 500) / 2;
 		var e = (e ? e : window.event);
@@ -31,4 +38,13 @@
 		return true;
 	}
 
-})();
+	// public stuff
+	return {
+		init: init,
+		popup: openPopup,
+		addEvent: addEvent
+	}
+}
+
+var DVKSS = new DVKSS();
+DVKSS.addEvent('load', DVKSS.init)

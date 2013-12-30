@@ -1,5 +1,12 @@
-<?php dvkss_no_direct_access(); ?>
-<div id="dvkss" class="wrap">
+<?php 
+
+if ( ! defined( 'ABSPATH' ) ) {
+	header( 'HTTP/1.0 403 Forbidden' );
+	header( 'X-Robots-Tag: noindex' );
+	exit;
+} 
+
+?><div id="dvkss" class="wrap">
 	<div class="dvkss-container">
 		<div class="dvkss-column dvkss-primary">
 
