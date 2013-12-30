@@ -1,10 +1,10 @@
 function DVKSS() {
 
-	function addEvent(eventName, callback) {
-		if (window.addEventListener) {
-			window.addEventListener(eventName, callback, false);
+	function addEvent(element, eventName, callback) {
+		if (element.addEventListener) {
+			element.addEventListener(eventName, callback, false);
 		} else {
-			window.attachEvent("on" + eventName, callback);
+			element.attachEvent("on" + eventName, callback);
 		}
 	}
 
@@ -12,7 +12,7 @@ function DVKSS() {
 	function init() {
 		var links = document.querySelectorAll('.dvk-social-sharing a');
 	    for (var i = 0; i < links.length; i++) {
-			DVKSS.addEvent('click', DVKSS.popup)
+			DVKSS.addEvent(links[i], 'click', DVKSS.popup)
 	    }
 	}
 
@@ -47,4 +47,4 @@ function DVKSS() {
 }
 
 var DVKSS = new DVKSS();
-DVKSS.addEvent('load', DVKSS.init)
+DVKSS.addEvent(window, 'load', DVKSS.init)
