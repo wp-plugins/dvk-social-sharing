@@ -4,7 +4,7 @@ Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
 Tested up to: 3.8
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,12 +134,9 @@ Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk
 
 == Changelog ==
 
-= 1.0.8 - December 30, 2013 =
-- Fixed: bug where pop-up was opened after all links. 
-
-= 1.0.7 - December 30, 2013 =
-- Added: Danish translation, thanks Finn!
-- Added: Russian translation, thanks Nikita!
+= 1.0.9 - December 30, 2013 =
+- Added: Danish translation, thanks to [Finn Hoelgaard](http://fhn.dk/)!
+- Added: Russian translation, thanks to Nikita!
 - Improved: Pop-up script now waits for full page load.
 
 = 1.0.6 - December 20, 2013 =
