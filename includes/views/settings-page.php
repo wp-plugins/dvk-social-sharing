@@ -1,4 +1,12 @@
-<div id="dvkss" class="wrap">
+<?php 
+
+if ( ! defined( 'ABSPATH' ) ) {
+	header( 'HTTP/1.0 403 Forbidden' );
+	header( 'X-Robots-Tag: noindex' );
+	exit;
+} 
+
+?><div id="dvkss" class="wrap">
 	<div class="dvkss-container">
 		<div class="dvkss-column dvkss-primary">
 
@@ -27,8 +35,8 @@
 						<?php _e('Auto-add sharing links?', 'dvk-social-sharing'); ?>
 					</th>
 					<td>
-						<label><input type="radio" name="dvk_social_sharing[auto_add]" value="1" <?php checked($opts['auto_add'], 1); ?> > Yes</label> &nbsp; 
-						<label><input type="radio" name="dvk_social_sharing[auto_add]" value="0" <?php checked($opts['auto_add'], 0); ?> > No</label>
+						<label><input type="radio" name="dvk_social_sharing[auto_add]" value="1" <?php checked($opts['auto_add'], 1); ?> > <?php _e('Yes'); ?></label> &nbsp; 
+						<label><input type="radio" name="dvk_social_sharing[auto_add]" value="0" <?php checked($opts['auto_add'], 0); ?> > <?php _e('No'); ?></label>
 						<br>
 						<small><?php _e('Automatically adds the sharing links to the end of posts.', 'dvk-social-sharing'); ?></small>
 					</td>
@@ -39,10 +47,10 @@
 						<?php _e('Load Icon CSS?', 'dvk-social-sharing'); ?>
 					</th>
 					<td>
-						<label><input type="radio" name="dvk_social_sharing[load_icon_css]" value="1" <?php checked($opts['load_icon_css'], 1); ?> > Yes</label> &nbsp; 
-						<label><input type="radio" name="dvk_social_sharing[load_icon_css]" value="0" <?php checked($opts['load_icon_css'], 0); ?> > No</label>
+						<label><input type="radio" name="dvk_social_sharing[load_icon_css]" value="1" <?php checked($opts['load_icon_css'], 1); ?> > <?php _e('Yes'); ?></label> &nbsp; 
+						<label><input type="radio" name="dvk_social_sharing[load_icon_css]" value="0" <?php checked($opts['load_icon_css'], 0); ?> > <?php _e('No'); ?></label>
 						<br>
-						<small><?php _e('Adds simple but pretty icons to the sharing links.'); ?></small>
+						<small><?php _e('Adds simple but pretty icons to the sharing links.', 'dvk-social-sharing'); ?></small>
 					</td>
 				</tr>
 
@@ -52,8 +60,8 @@
 					</th>
 					<td>
 						<select name="dvk_social_sharing[icon_size]" id="dvkss_icon_size" class="widefat">
-							<option value="16" <?php selected($opts['icon_size'], 16); ?> >Small - 16x16 pixels</option>
-							<option value="32" <?php selected($opts['icon_size'], 32); ?> >Normal - 32x32 pixels</option>
+							<option value="16" <?php selected($opts['icon_size'], 16); ?> ><?php _e('Small'); ?> - 16x16 pixels</option>
+							<option value="32" <?php selected($opts['icon_size'], 32); ?> ><?php _e('Normal'); ?> - 32x32 pixels</option>
 						</select>
 					</td>
 				</tr>
@@ -63,10 +71,10 @@
 						<?php _e('Load Pop-Up JS?', 'dvk-social-sharing'); ?>
 					</th>
 					<td>
-						<label><input type="radio" name="dvk_social_sharing[load_popup_js]" value="1" <?php checked($opts['load_popup_js'], 1); ?> > Yes</label> &nbsp; 
-						<label><input type="radio" name="dvk_social_sharing[load_popup_js]" value="0" <?php checked($opts['load_popup_js'], 0); ?> > No</label>
+						<label><input type="radio" name="dvk_social_sharing[load_popup_js]" value="1" <?php checked($opts['load_popup_js'], 1); ?> > <?php _e('Yes'); ?></label> &nbsp; 
+						<label><input type="radio" name="dvk_social_sharing[load_popup_js]" value="0" <?php checked($opts['load_popup_js'], 0); ?> > <?php _e('No'); ?></label>
 						<br>
-						<small>A small JavaScript file of just 600 bytes so people won't have to leave your website to share.</small>
+						<small><?php _e("A small JavaScript file of just 600 bytes so people won't have to leave your website to share.", 'dvk-social-sharing'); ?></small>
 					</td>
 				</tr>
 

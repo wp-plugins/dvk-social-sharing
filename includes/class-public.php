@@ -1,5 +1,11 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	header( 'HTTP/1.0 403 Forbidden' );
+	header( 'X-Robots-Tag: noindex' );
+	exit;
+}
+
 class DVKSS_Public {
 	
 	public function __construct() {
@@ -15,7 +21,7 @@ class DVKSS_Public {
 		$opts = dvkss_get_options();
 
 		if($opts['load_icon_css']) {
-			wp_enqueue_style('dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/styles-'. $opts['icon_size'] .'.css', array(), DVKSS_VERSION);
+			wp_enqueue_style('dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/styles-'. absint($opts['icon_size']) .'.css', array(), DVKSS_VERSION);
 		}
 
 		if($opts['load_popup_js']) {
