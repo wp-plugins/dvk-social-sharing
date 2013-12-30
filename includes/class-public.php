@@ -15,7 +15,7 @@ class DVKSS_Public {
 		$opts = dvkss_get_options();
 
 		if($opts['load_icon_css']) {
-			wp_enqueue_style('dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/styles-'. $opts['icon_size'] .'.css', array(), DVKSS_VERSION);
+			wp_enqueue_style('dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/styles-'. absint($opts['icon_size']) .'.css', array(), DVKSS_VERSION);
 		}
 
 		if($opts['load_popup_js']) {

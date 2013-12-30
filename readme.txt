@@ -3,8 +3,8 @@ Contributors: DvanKooten
 Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
-Tested up to: 3.7.1
-Stable tag: 1.0.4
+Tested up to: 3.8
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,7 @@ You can have the plugin load two very small files to add icons and a pop-up func
 
 - English (en_US) - Danny
 - Dutch (nl_NL) - Danny
+- French (fr_FR) - [Said](http://www.ninapeople.com/)
 - Looking for more translations..
 
 If you have created your own language pack, or have an update of an existing one, you can send [gettext PO and MO files](http://codex.wordpress.org/Translating_WordPress) to me so that I can bundle it into Social Sharing by Danny. You can [download the latest PO file here](http://plugins.svn.wordpress.org/dvk-social-sharing/trunk/languages/dvk-social-sharing.po).
@@ -130,6 +131,15 @@ The texts for the different links. Defaults to the string set in the translation
 Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk-social-sharing/faq/) section for some examples of additional customization.
 
 == Changelog ==
+
+= 1.0.6 - December 20, 2013 =
+- Improved: Pop-up JS now used addEventListener to enable multiple event listeners (like a Google Analytics plugin) attaching to the sharing links.
+
+= 1.0.5 - December 9, 2013 =
+- Added: French translations, thanks to [Said](http://www.ninapeople.com/)
+- Improved: All backend strings are now translatable
+- Improved: Prevented direct access or search engine indexing of plugin files
+- Improved: Facebook URL sharing parameters
 
 = 1.0.4 - December 2, 2013 =
 - Improved: Minified pop-up script to 480 bytes.

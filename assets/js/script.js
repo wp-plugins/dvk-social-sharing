@@ -2,7 +2,11 @@
 
 	var links = document.querySelectorAll('.dvk-social-sharing a');
     for (var i = 0; i < links.length; i++) {
-		links[i].onclick = social_popup;
+		if (links[i].attachEvent) {
+		 	links[i].attachEvent('onclick', social_popup);
+		} else {
+		 	links[i].addEventListener("click", social_popup, false);
+		}		
     }
 
 	function social_popup(e)
@@ -20,11 +24,11 @@
 
 		if(popup) {
 			popup.focus();
-			if(e.preventDefault) e.preventDefault();
-			e.returnValue = false;
+			e.preventDefault();
+			return false;
 		}
 
-		return !!popup;
+		return true;
 	}
 
 })();
