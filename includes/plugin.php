@@ -1,8 +1,8 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	header( 'HTTP/1.0 403 Forbidden' );
-	header( 'X-Robots-Tag: noindex' );
+if( ! defined("DVKSS_VERSION") ) {
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
 	exit;
 }
 
@@ -10,7 +10,7 @@ function dvkss_get_options()
 {	
 	static $options;
 
-	if(!$options) {
+	if( ! $options ) {
 		// default options
 		$defaults = array(
 			'load_icon_css' => 1,
@@ -22,15 +22,15 @@ function dvkss_get_options()
 		);
 
 		// get options from db
-		$db_option = get_option('dvk_social_sharing', array());
+		$db_option = get_option( 'dvk_social_sharing', array() );
 
 		// add option to database if not set, saves a query
-		if(!$db_option) {
-			update_option('dvk_social_sharing', $defaults);
+		if( ! $db_option ) {
+			update_option( 'dvk_social_sharing', $defaults );
 		}
 
 		// merge with default options to prevent notices
-		$options = wp_parse_args($db_option, $defaults);
+		$options = wp_parse_args( $db_option, $defaults );
 	}
 
 	return $options;

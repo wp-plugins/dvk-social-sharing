@@ -3,8 +3,8 @@ Contributors: DvanKooten
 Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
-Tested up to: 3.8
-Stable tag: 1.0.8
+Tested up to: 3.8.1
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,7 @@ You can have the plugin load two very small files to add icons and a pop-up func
 - Dutch (nl_NL) - Danny
 - French (fr_FR) - [Said](http://www.ninapeople.com/)
 - Danish (da_DK) - [Finn Hoelgaard](http://fhn.dk/)
+- Slovenian (sl_SI) - [Domen Hrabar, Viking Marketing](http://www.vikingmarketing.si/)
 - Russian (ru_RU) - Nikita
 - Looking for more translations..
 
@@ -134,12 +135,14 @@ Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk
 
 == Changelog ==
 
-= 1.0.8 - December 30, 2013 =
-- Fixed: bug where pop-up was opened after all links. 
+= 1.1 - February 19, 2014 =
+- Added: Slovenian translations, thanks to [Domen Hrabar, Viking Marketing](http://www.vikingmarketing.si/) 
+- Improved: direct file access security
 
-= 1.0.7 - December 30, 2013 =
-- Added: Danish translation, thanks Finn!
-- Added: Russian translation, thanks Nikita!
+
+= 1.0.9 - December 30, 2013 =
+- Added: Danish translation, thanks to [Finn Hoelgaard](http://fhn.dk/)!
+- Added: Russian translation, thanks to Nikita!
 - Improved: Pop-up script now waits for full page load.
 
 = 1.0.6 - December 20, 2013 =

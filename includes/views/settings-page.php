@@ -1,10 +1,10 @@
 <?php 
 
-if ( ! defined( 'ABSPATH' ) ) {
-	header( 'HTTP/1.0 403 Forbidden' );
-	header( 'X-Robots-Tag: noindex' );
+if( ! defined("DVKSS_VERSION") ) {
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
 	exit;
-} 
+}
 
 ?><div id="dvkss" class="wrap">
 	<div class="dvkss-container">
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php _e('Text before links', 'dvk-social-sharing'); ?>
 					</th>
 					<td>
-						<input type="text" name="dvk_social_sharing[before_text]" id="dvkss_text" class="widefat" value="<?php echo esc_attr($opts['before_text']); ?>">
+						<input type="text" name="dvk_social_sharing[before_text]" id="dvkss_text" class="widefat" placeholder="Share this post:" value="<?php echo esc_attr($opts['before_text']); ?>">
 						<small><?php _e('The text to show before the sharing links.', 'dvk-social-sharing'); ?></small>
 					</td>
 				</tr>
@@ -83,7 +83,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<label for="dvkss_twitter_username"><?php _e('Twitter Username', 'dvk-social-sharing'); ?></label>
 					</th>
 					<td>
-						<input type="text" name="dvk_social_sharing[twitter_username]" id="dvkss_twitter_username" class="widefat" value="<?php echo esc_attr($opts['twitter_username']); ?>">
+						<input type="text" name="dvk_social_sharing[twitter_username]" id="dvkss_twitter_username" class="widefat" placeholder="DannyvanKooten" value="<?php echo esc_attr($opts['twitter_username']); ?>">
 						<small><?php _e('Set this if you want to append "via @yourTwitterUsername" to tweets.', 'dvk-social-sharing'); ?></small>
 					</td>
 				</tr>
