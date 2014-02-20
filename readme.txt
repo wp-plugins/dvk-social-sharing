@@ -56,7 +56,7 @@ If you have created your own language pack, or have an update of an existing one
 
 = Can I display the sharing buttons using a shortcode? =
 
-Yes, you can use the following shortcode.
+Yes, you can use the following shortcode (eg. inside posts or pages).
 
 `
 [dvk_social_sharing]
@@ -67,7 +67,7 @@ Yes, you can use the following PHP function from your template files.
 
 
 `
-dvk_social_sharing();
+<?php echo dvk_social_sharing(); ?>
 `
 
 = I want to add the sharing links to more than just single posts =
