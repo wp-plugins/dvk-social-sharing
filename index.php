@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Social Sharing by Danny
-Version: 1.0.8
+Version: 1.2
 Plugin URI: http://dannyvankooten.com/wordpress-plugins/social-sharing-by-danny/
 Description: Adds super lightweight (no-scripts) social share buttons to your posts.
 Author: Danny van Kooten
@@ -28,26 +28,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	header( 'HTTP/1.0 403 Forbidden' );
-	header( 'X-Robots-Tag: noindex' );
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
 	exit;
 }
 
-define("DVKSS_VERSION", "1.0.8");
-define("DVKSS_PLUGIN_DIR", plugin_dir_path(__FILE__)); 
-define("DVKSS_PLUGIN_URL", plugins_url( '/' , __FILE__ ));
+define( "DVKSS_VERSION", "1.2" );
+define( "DVKSS_PLUGIN_DIR", plugin_dir_path( __FILE__ ) ); 
+define( "DVKSS_PLUGIN_URL", plugins_url( '/' , __FILE__ ) );
 
 require_once DVKSS_PLUGIN_DIR . 'includes/plugin.php';
-add_action('plugins_loaded', 'dvkss_load_textdomain');
+add_action( 'plugins_loaded', 'dvkss_load_textdomain' );
 
-if(!is_admin()) {
+if( ! is_admin() ) {
 
 	// PUBLIC SECTION
 	require_once DVKSS_PLUGIN_DIR . 'includes/template-functions.php';
 	require_once DVKSS_PLUGIN_DIR . 'includes/class-public.php';
 	new DVKSS_Public();
 
-} elseif(!defined("DOING_AJAX") || !DOING_AJAX) {
+} elseif( ! defined("DOING_AJAX") || ! DOING_AJAX ) {
 	
 	// ADMIN SECTION
 	require DVKSS_PLUGIN_DIR . 'includes/class-admin.php';
