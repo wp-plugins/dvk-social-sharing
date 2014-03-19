@@ -4,7 +4,7 @@ Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,7 @@ You can have the plugin load two very small files to add icons and a pop-up func
 - Danish (da_DK) - [Finn Hoelgaard](http://fhn.dk/)
 - Slovenian (sl_SI) - [Domen Hrabar, Viking Marketing](http://www.vikingmarketing.si/)
 - Russian (ru_RU) - Nikita
+- Spanish (es_ES) - [Luciano A. Ferrer](http://cbasites.net/)
 - Looking for more translations..
 
 If you have created your own language pack, or have an update of an existing one, you can send [gettext PO and MO files](http://codex.wordpress.org/Translating_WordPress) to me so that I can bundle it into Social Sharing by Danny. You can [download the latest PO file here](http://plugins.svn.wordpress.org/dvk-social-sharing/trunk/languages/dvk-social-sharing.po).
@@ -70,7 +71,7 @@ Yes, you can use the following PHP function from your template files.
 <?php echo dvk_social_sharing(); ?>
 `
 
-= I want to add the sharing links to more than just single posts =
+= I want more control over when to show the sharing options =
 
 Use the `dvkss_display` filter to show the links in more places. 
 
@@ -134,6 +135,15 @@ The texts for the different links. Defaults to the string set in the translation
 Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk-social-sharing/faq/) section for some examples of additional customization.
 
 == Changelog ==
+= 1.2 - March 19, 2014 =
+**Additions**
+
+- Added option to automatically add sharing options to all registered post types
+- Added Spanish translations, props to [Luciano A. Ferrer](http://cbasites.net/).
+
+** Improvements**
+
+- Disabled Pop-up JS by default until we figure out a better browser compatible way.
 
 = 1.1 - February 19, 2014 =
 - Added: Slovenian translations, thanks to [Domen Hrabar, Viking Marketing](http://www.vikingmarketing.si/) 

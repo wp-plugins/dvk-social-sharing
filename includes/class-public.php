@@ -8,6 +8,9 @@ if( ! defined( "DVKSS_VERSION" ) ) {
 
 class DVKSS_Public {
 	
+	/**
+	* Constructor
+	*/
 	public function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_assets' ), 99 );
 
@@ -16,6 +19,9 @@ class DVKSS_Public {
 		add_shortcode( 'dvk_social_sharing', 'dvk_social_sharing' );
 	}
 
+	/**
+	* Load plugin stylesheets and scripts
+	*/
 	public function load_assets() 
 	{
 		$opts = dvkss_get_options();
@@ -25,20 +31,24 @@ class DVKSS_Public {
 		}
 
 		if( $opts['load_popup_js'] ) {
-			wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/script.min.js', array(), DVKSS_VERSION, true );
+			wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/script.min.js', array( ), DVKSS_VERSION, true );
 		}
 	}
 
+	/**
+	* Automatically adds links to post content
+	*/
 	public function add_links($content) 
 	{
 		$opts = dvkss_get_options();
+		$show_buttons = false;
 
-		if( ! $opts['auto_add'] ) { 
-			return $content; 
+		if( ! empty( $opts['auto_add_post_types'] ) && in_array( get_post_type(), $opts['auto_add_post_types'] ) && is_singular( $opts['auto_add_post_types'] ) ) {
+			$show_buttons = true;
 		}
 
-		// by default, the buttons will only show on single posts
-		$show_buttons = apply_filters( 'dvkss_display', ( is_single() && get_post_type() == 'post' ) );
+		// allow custom conditionals
+		$show_buttons = apply_filters( 'dvkss_display', $show_buttons );
 
 		if( ! $show_buttons ) { 
 			return $content; 

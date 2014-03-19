@@ -6,7 +6,13 @@ if( ! defined("DVKSS_VERSION") ) {
     exit;
 }
 
-function dvk_social_sharing($args = array()) {
+/**
+* Returns a string containing the sharing buttons HTML 
+*
+* @param array $args
+* @return string 
+*/
+function dvk_social_sharing( $args = array() ) {
 
     $opts = dvkss_get_options();
 	$defaults = array(
@@ -14,18 +20,18 @@ function dvk_social_sharing($args = array()) {
 		'social_options' => 'twitter, facebook, googleplus',
         'twitter_username' => $opts['twitter_username'],
         'before_text' => $opts['before_text'],
-        'twitter_text' => __('on Twitter', 'dvk-social-sharing'),
-        'facebook_text' => __('on Facebook', 'dvk-social-sharing'),
-        'googleplus_text' => __('on Google+', 'dvk-social-sharing'),
+        'twitter_text' => __( 'on Twitter', 'dvk-social-sharing' ),
+        'facebook_text' => __( 'on Facebook', 'dvk-social-sharing' ),
+        'googleplus_text' => __( 'on Google+', 'dvk-social-sharing' ),
 	);
 
 	// create final arguments array
-	$args = wp_parse_args($args, $defaults);
+	$args = wp_parse_args( $args, $defaults );
 	$args['social_options'] = array_filter( array_map( 'trim', explode( ',', $args['social_options'] ) ) );
-	extract($args);
+	extract( $args );
 
-	$title = urlencode(get_the_title());
-	$url = urlencode(get_permalink());
+	$title = urlencode( get_the_title() );
+	$url = urlencode( get_permalink() );
 
 	ob_start();
 	?>

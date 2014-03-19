@@ -32,13 +32,20 @@ if( ! defined("DVKSS_VERSION") ) {
 
 				<tr valign="top">
 					<th scope="row">
-						<?php _e('Auto-add sharing links?', 'dvk-social-sharing'); ?>
+						<?php _e('Automatically add sharing links?', 'dvk-social-sharing'); ?>
 					</th>
 					<td>
-						<label><input type="radio" name="dvk_social_sharing[auto_add]" value="1" <?php checked($opts['auto_add'], 1); ?> > <?php _e('Yes'); ?></label> &nbsp; 
-						<label><input type="radio" name="dvk_social_sharing[auto_add]" value="0" <?php checked($opts['auto_add'], 0); ?> > <?php _e('No'); ?></label>
-						<br>
-						<small><?php _e('Automatically adds the sharing links to the end of posts.', 'dvk-social-sharing'); ?></small>
+						<ul>
+						<?php foreach( $post_types as $post_type_id => $post_type ) { ?>
+							<li>
+								<label>
+									<input type="checkbox" name="dvk_social_sharing[auto_add_post_types][]" value="<?php echo esc_attr( $post_type_id ); ?>" <?php checked( in_array( $post_type_id, $opts['auto_add_post_types'] ), true ); ?>> <?php printf( __(' Auto add to %s', 'dvk-social-sharing' ), $post_type->labels->name ); ?>
+								</label>
+							</li>
+						<?php } ?>
+						</ul>
+						
+						<small><?php _e('Automatically adds the sharing links to the end of the selected post types.', 'dvk-social-sharing'); ?></small>
 					</td>
 				</tr>
 
