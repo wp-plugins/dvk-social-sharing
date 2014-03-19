@@ -141,7 +141,7 @@ Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk
 - Added option to automatically add sharing options to all registered post types
 - Added Spanish translations, props to [Luciano A. Ferrer](http://cbasites.net/).
 
-** Improvements**
+**Improvements**
 
 - Disabled Pop-up JS by default until we figure out a better browser compatible way.
 
