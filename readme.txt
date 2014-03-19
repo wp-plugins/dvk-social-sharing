@@ -143,7 +143,7 @@ Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk
 
 **Improvements**
 
-- Disabled Pop-up JS by default until we figure out a better browser compatible way.
+- Disabled Pop-up JS by default until we figure out a cross-browser compatibility fix.
 
 = 1.1 - February 19, 2014 =
 - Added: Slovenian translations, thanks to [Domen Hrabar, Viking Marketing](http://www.vikingmarketing.si/) 
