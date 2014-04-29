@@ -3,10 +3,11 @@ Contributors: DvanKooten
 Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 1.2
+Tested up to: 3.9
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dvk-social-sharing
 
 Adds very simple social sharing buttons for Twitter, Facebook and Google+ to the end of your posts.
 
@@ -44,6 +45,7 @@ You can have the plugin load two very small files to add icons and a pop-up func
 - Slovenian (sl_SI) - [Domen Hrabar, Viking Marketing](http://www.vikingmarketing.si/)
 - Russian (ru_RU) - Nikita
 - Spanish (es_ES) - [Luciano A. Ferrer](http://cbasites.net/)
+- German (de_DE) - Andreas Kuhl
 - Looking for more translations..
 
 If you have created your own language pack, or have an update of an existing one, you can send [gettext PO and MO files](http://codex.wordpress.org/Translating_WordPress) to me so that I can bundle it into Social Sharing by Danny. You can [download the latest PO file here](http://plugins.svn.wordpress.org/dvk-social-sharing/trunk/languages/dvk-social-sharing.po).
@@ -135,6 +137,17 @@ The texts for the different links. Defaults to the string set in the translation
 Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk-social-sharing/faq/) section for some examples of additional customization.
 
 == Changelog ==
+
+= 1.2.1 - April 29, 2014 =
+**Additions**
+
+- Added German translations, thanks Andreas Kuhl!
+
+**Improvements**
+
+- Wrapped non-translatable strings in translation calls.
+- Updated Dutch translations
+
 = 1.2 - March 19, 2014 =
 **Additions**
 
