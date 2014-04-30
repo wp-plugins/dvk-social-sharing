@@ -4,10 +4,9 @@ Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: dvk-social-sharing
 
 Adds very simple social sharing buttons for Twitter, Facebook and Google+ to the end of your posts.
 
@@ -137,6 +136,12 @@ The texts for the different links. Defaults to the string set in the translation
 Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk-social-sharing/faq/) section for some examples of additional customization.
 
 == Changelog ==
+
+= 1.2.2 - April 30, 2014 =
+
+**Fixes**
+
+- Fixed not being able to save all "auto add to .." checkboxes unchecked
 
 = 1.2.1 - April 29, 2014 =
 **Additions**

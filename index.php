@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( "DVKSS_VERSION", "1.2.1" );
+define( "DVKSS_VERSION", "1.2.2" );
 define( "DVKSS_PLUGIN_DIR", plugin_dir_path( __FILE__ ) ); 
 define( "DVKSS_PLUGIN_URL", plugins_url( '/' , __FILE__ ) );
 
