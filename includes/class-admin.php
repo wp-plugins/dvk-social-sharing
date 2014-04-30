@@ -76,6 +76,7 @@ class DVKSS_Admin {
 		$settings['before_text'] = strip_tags( $settings['before_text'], '<a><br><strong><i><em><b><span>' );
 		$settings['icon_size'] = trim( absint( $settings['icon_size'] ) );
 		$settings['twitter_username'] = trim( strip_tags( $settings['twitter_username'] ) );
+		$settings['auto_add_post_types'] = ( isset( $settings['auto_add_post_types'] ) ) ? $settings['auto_add_post_types'] : array();
 
 		return $settings;
 	}

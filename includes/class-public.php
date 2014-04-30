@@ -36,9 +36,12 @@ class DVKSS_Public {
 	}
 
 	/**
-	* Automatically adds links to post content
-	*/
-	public function add_links($content) 
+	 * Automatically adds links to post content
+	 *
+	 * @param string $content
+	 * @return string
+	 */
+	public function add_links( $content )
 	{
 		$opts = dvkss_get_options();
 		$show_buttons = false;
