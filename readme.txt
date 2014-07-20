@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: DvanKooten
+Contributors: DvanKooten, 12notions
 Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
