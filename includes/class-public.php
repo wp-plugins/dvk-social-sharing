@@ -25,13 +25,14 @@ class DVKSS_Public {
 	public function load_assets() 
 	{
 		$opts = dvkss_get_options();
+		$suffix = ( defined( SCRIPT_DEBUG ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 		if( $opts['load_icon_css'] ) {
-			wp_enqueue_style( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/styles-'. absint( $opts['icon_size'] ) .'.css', array(), DVKSS_VERSION );
+			wp_enqueue_style( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/styles-'. absint( $opts['icon_size'] ) . $suffix . '.css', array(), DVKSS_VERSION );
 		}
 
 		if( $opts['load_popup_js'] ) {
-			wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/script.min.js', array( ), DVKSS_VERSION, true );
+			wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/script' . $suffix . '.js', array( ), DVKSS_VERSION, true );
 		}
 	}
 

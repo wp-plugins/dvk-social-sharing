@@ -54,8 +54,9 @@ class DVKSS_Admin {
 	* Load admin scripts and stylesheets
 	*/
 	public function load_css() {
-		wp_enqueue_style( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/admin-styles.css'  );
-		wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/admin-script.js', array( 'jquery' ), DVKSS_VERSION , true );
+		$suffix = ( defined( SCRIPT_DEBUG ) && SCRIPT_DEBUG ) ? '' : '.min';
+		wp_enqueue_style( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/admin-styles' . $suffix .'.css'  );
+		wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/admin-script' . $suffix .'.js', array( 'jquery' ), DVKSS_VERSION , true );
 	}
 
 	/**

@@ -1,10 +1,10 @@
 === Plugin Name ===
-Contributors: DvanKooten, 12notions
+Contributors: DvanKooten
 Donate link: http://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
 Requires at least: 3.5
-Tested up to: 3.9
-Stable tag: 1.2.2
+Tested up to: 4.0
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -136,6 +136,13 @@ The texts for the different links. Defaults to the string set in the translation
 Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk-social-sharing/faq/) section for some examples of additional customization.
 
 == Changelog ==
+
+= 1.2.3 - September 4, 2014 =
+
+**Improvements**
+
+- Added minified scripts and option to load minified version
+- Some textual improvements
 
 = 1.2.2 - April 30, 2014 =
 

@@ -111,25 +111,12 @@ if( ! defined("DVKSS_VERSION") ) {
 		<div class="dvkss-box">
 			<h3 class="dvkss-title"><?php _e( 'Donate $10, $20 or $50', 'dvk-social-sharing' ); ?></h3>
 			<p><?php _e( 'If you like this plugin, consider supporting it by donating a token of your appreciation.', 'dvk-social-sharing' ); ?></p>
+			<p><a href="http://dannyvankooten.com/donate/" class="button-primary"><?php _e( 'Donate with PayPal', 'scroll-triggered-boxes' ); ?></a></p>
 
-			<div class="dvkss-donate">
-				<form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-					<input type="hidden" name="cmd" value="_donations">
-					<input type="hidden" name="business" value="AP87UHXWPNBBU">
-					<input type="hidden" name="lc" value="US">
-					<input type="hidden" name="item_name" value="Danny van Kooten">
-					<input type="hidden" name="item_number" value="Social Sharing by Danny">
-					<input type="hidden" name="currency_code" value="USD">
-					<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
-					<button name="submit" class="button-primary"><?php _e( 'Donate with PayPal', 'dvk-social-sharing' ); ?></button>
-					<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
-				</form>
-			</div>
 		
 			<p><?php _e( 'Some other ways to support this plugin', 'dvk-social-sharing' ); ?></p>
 			<ul class="ul-square">
 				<li><a href="http://wordpress.org/support/view/plugin-reviews/dvk-social-sharing?rate=5#postform" target="_blank"><?php printf( __( 'Leave a %s review on WordPress.org', 'dvk-social-sharing' ), '&#9733;&#9733;&#9733;&#9733;&#9733;' ); ?></a></li>
-				<li><a href="http://dannyvankooten.com/wordpress-plugins/dvk-social-sharing/" target="_blank"><?php _e( 'Link to the plugin page from your blog', 'dvk-social-sharing' ); ?></a></li>
 				<li><a href="http://twitter.com/intent/tweet/?text=<?php echo urlencode('I am using Social Sharing by Danny to show sharing options on my WordPress site. It\'s great!'); ?>&via=DannyvanKooten&url=<?php echo urlencode('http://wordpress.org/plugins/dvk-social-sharing/'); ?>" target="_blank">Tweet about Social Sharing by Danny</a></li>
 				<li><a href="http://wordpress.org/plugins/dvk-social-sharing/#compatibility"><?php _e( 'Vote "works" on the WordPress.org plugin page', 'dvk-social-sharing' ); ?></a></li>
 			</ul>
@@ -152,10 +139,11 @@ if( ! defined("DVKSS_VERSION") ) {
 
 			<div class="dvkss-box">
 				<h3 class="dvkss-title">About the developer</h3>
-				<p>My name is <a href="http://dannyvankooten.com/">Danny van Kooten</a>. I develop WordPress plugins which help you build your websites. I love simplicity, happy customers and clean code.</p>
-				<p>Take a look at my other <a href="http://dannyvankooten.com/wordpress-plugins/">plugins for WordPress</a> or <em>like</em> my Facebook page to stay updated.</p>
-				<p><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FCodeToTheChase&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=false&amp;appId=225994527565061" scrolling="no" frameborder="0" style="border:none; width: 100%; overflow:hidden; height: 80px;" allowTransparency="true"></iframe></p>
-				<p>You can also follow me on twitter <a href="http://twitter.com/dannyvankooten">here</a>.</p>
+				<p>I am <a href="http://dannyvankooten.com/">Danny van Kooten</a>, a young Dutch developer. I write code and emails for a living while traveling the world.</p>
+				<p>I developed several <a href="http://dannyvankooten.com/wordpress-plugins/">plugins for WordPress</a> totalling well over a million downloads, the most important one being <a href="https://mc4wp.com/">MailChimp for WordPress</a>.</p>
+				<p><a href="https://twitter.com/dannyvankooten">Follow me on Twitter</a> to stay updated of what I'm working on.</p>
+				<p>Hope you like this plugin!</p>
+				<p><em>~ Danny</em></p>
 			</div>
 		</div>
 		<!-- End dvkss Sidebar -->
