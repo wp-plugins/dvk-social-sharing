@@ -54,8 +54,9 @@ class DVKSS_Admin {
 	* Load admin scripts and stylesheets
 	*/
 	public function load_css() {
-		wp_enqueue_style( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/admin-styles.css'  );
-		wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/admin-script.js', array( 'jquery' ), DVKSS_VERSION , true );
+		$suffix = ( defined( SCRIPT_DEBUG ) && SCRIPT_DEBUG ) ? '' : '.min';
+		wp_enqueue_style( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/admin-styles' . $suffix .'.css'  );
+		wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/admin-script' . $suffix .'.js', array( 'jquery' ), DVKSS_VERSION , true );
 	}
 
 	/**
@@ -76,6 +77,7 @@ class DVKSS_Admin {
 		$settings['before_text'] = strip_tags( $settings['before_text'], '<a><br><strong><i><em><b><span>' );
 		$settings['icon_size'] = trim( absint( $settings['icon_size'] ) );
 		$settings['twitter_username'] = trim( strip_tags( $settings['twitter_username'] ) );
+		$settings['auto_add_post_types'] = ( isset( $settings['auto_add_post_types'] ) ) ? $settings['auto_add_post_types'] : array();
 
 		return $settings;
 	}
