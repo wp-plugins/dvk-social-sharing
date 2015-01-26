@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Social Sharing by Danny
-Version: 1.2.4
+Version: 1.2.5
 Plugin URI: https://dannyvankooten.com/wordpress-plugins/social-sharing-by-danny/
 Description: Adds super lightweight (no-scripts) social share buttons to your posts.
 Author: Danny van Kooten
@@ -11,7 +11,7 @@ Domain Path: /languages/
 License: GPL v3
 
 Social Sharing By Danny Plugin
-Copyright (C) 2013, Danny van Kooten, hi@dannyvankooten.com
+Copyright (C) 2013-2015, Danny van Kooten, hi@dannyvankooten.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( "DVKSS_VERSION", "1.2.4" );
+define( "DVKSS_VERSION", "1.2.5" );
 define( "DVKSS_PLUGIN_DIR", plugin_dir_path( __FILE__ ) ); 
 define( "DVKSS_PLUGIN_URL", plugins_url( '/' , __FILE__ ) );
 

@@ -1,23 +1,26 @@
-function DVKSS() {
+(function() {
+	'use strict';
 
-	function addEvent(element, eventName, callback) {
-		if (element.addEventListener) {
-			element.addEventListener(eventName, callback, false);
-		} else {
-			element.attachEvent("on" + eventName, callback);
-		}
-	}
+	/**
+	 * Initialises the Social Sharing plugin
+	 */
+	function initSocialSharing() {
 
-	// init
-	function init() {
-		var links = document.querySelectorAll('.dvk-social-sharing a');
-		console.log( links );
+		var links;
+
+		links = document.querySelectorAll('.dvk-social-sharing a');
 		for (var i = 0; i < links.length; i++) {
-			DVKSS.addEvent(links[i], 'click', DVKSS.popup)
+			addEvent(links[i], 'click', openPopup);
 		}
+
 	}
 
-	// functions
+	/**
+	 * Open a popup
+	 *
+	 * @param e
+	 * @returns {boolean}
+	 */
 	function openPopup(e) {
 
 		var top = (screen.availHeight - 500) / 2;
@@ -38,13 +41,21 @@ function DVKSS() {
 		return true;
 	}
 
-	// public stuff
-	return {
-		init: init,
-		popup: openPopup,
-		addEvent: addEvent
+	/**
+	 * Add event, compatible with IE.
+	 *
+	 * @param element
+	 * @param eventName
+	 * @param callback
+	 */
+	function addEvent(element, eventName, callback) {
+		if (element.addEventListener) {
+			element.addEventListener(eventName, callback, false);
+		} else {
+			element.attachEvent("on" + eventName, callback);
+		}
 	}
-}
 
-var DVKSS = new DVKSS();
-DVKSS.addEvent(window, 'load', DVKSS.init)
+	addEvent(window, 'load', initSocialSharing);
+
+})();

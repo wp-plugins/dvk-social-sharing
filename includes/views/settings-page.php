@@ -130,17 +130,17 @@ if( ! defined("DVKSS_VERSION") ) {
 		<div class="dvkss-box">
 			<h3 class="dvkss-title">Other Useful plugins</h3>
 			<ul class="ul-square">
-				<li><a href="http://wordpress.org/plugins/mailchimp-for-wp/">MailChimp for WordPress</a></li>
-				<li><a href="http://wordpress.org/plugins/scroll-triggered-boxes/">Scroll Triggered Boxes</a></li>
-				<li><a href="http://wordpress.org/plugins/wysiwyg-widgets/">WYSIWYG Widgets</a></li>
-				<li><a href="http://wordpress.org/plugins/recent-facebook-posts/">Recent Facebook Posts</a></li>
+				<li><a href="https://wordpress.org/plugins/mailchimp-for-wp/">MailChimp for WordPress</a></li>
+				<li><a href="https://wordpress.org/plugins/scroll-triggered-boxes/">Scroll Triggered Boxes</a></li>
+				<li><a href="https://wordpress.org/plugins/wysiwyg-widgets/">WYSIWYG Widgets</a></li>
+				<li><a href="https://wordpress.org/plugins/recent-facebook-posts/">Recent Facebook Posts</a></li>
 			</ul>
 			</div>
 
 			<div class="dvkss-box">
 				<h3 class="dvkss-title">About the developer</h3>
-				<p>I am <a href="http://dannyvankooten.com/">Danny van Kooten</a>, a young Dutch developer. I write code and emails for a living while traveling the world.</p>
-				<p>I developed several <a href="http://dannyvankooten.com/wordpress-plugins/">plugins for WordPress</a> totalling well over a million downloads, the most important one being <a href="https://mc4wp.com/">MailChimp for WordPress</a>.</p>
+				<p>I am <a href="https://dannyvankooten.com/">Danny van Kooten</a>, a young Dutch developer. I write code and emails for a living while traveling the world.</p>
+				<p>I developed several <a href="https://dannyvankooten.com/wordpress-plugins/">plugins for WordPress</a> totalling close to 2 million downloads, the most important one being <a href="https://mc4wp.com/">MailChimp for WordPress</a>.</p>
 				<p><a href="https://twitter.com/dannyvankooten">Follow me on Twitter</a> to stay updated of what I'm working on.</p>
 				<p>Hope you like this plugin!</p>
 				<p><em>~ Danny</em></p>
