@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: DvanKooten
-Donate link: http://dannyvankooten.com/donate/
+Donate link: https://dannyvankooten.com/donate/
 Tags: social, social sharing, buttons, twitter, googleplus, facebook
-Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 1.2
+Requires at least: 3.7
+Tested up to: 4.1.1
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Adds very simple social sharing buttons for Twitter, Facebook and Google+ to the
 
 = Social Sharing By Danny =
 
-The simplest sharing links possible for Twitter, Facebook and Google+. 
+The simplest sharing links possible for Twitter, Facebook and Google+.
 
 Most social sharing plugins are too ugly, heavy, complicated or poorly coded for my liking. This plugin aims to be different. Simple, lightweight and flexible.
 
@@ -30,7 +30,7 @@ You can have the plugin load two very small files to add icons and a pop-up func
 
 - Sharing links for Twitter, Facebook and Google+
 - Simple icon styles with a hover effect
-- Simple script of just 600 bytes (not jQuery dependent) which will make the links open in a pop-up window. 
+- Simple script of just 600 bytes (not jQuery dependent) which will make the links open in a pop-up window.
 - A shortcode and a template function to display the buttons anywhere you want.
 - An overridable filter to set the condition for when to display the sharing links.
 - Translation ready
@@ -44,6 +44,8 @@ You can have the plugin load two very small files to add icons and a pop-up func
 - Slovenian (sl_SI) - [Domen Hrabar, Viking Marketing](http://www.vikingmarketing.si/)
 - Russian (ru_RU) - Nikita
 - Spanish (es_ES) - [Luciano A. Ferrer](http://cbasites.net/)
+- German (de_DE) - Andreas Kuhl
+- Finish (fi_FI) - [Ari-Pekka Koponen](http://versi.fi/)
 - Looking for more translations..
 
 If you have created your own language pack, or have an update of an existing one, you can send [gettext PO and MO files](http://codex.wordpress.org/Translating_WordPress) to me so that I can bundle it into Social Sharing by Danny. You can [download the latest PO file here](http://plugins.svn.wordpress.org/dvk-social-sharing/trunk/languages/dvk-social-sharing.po).
@@ -73,7 +75,7 @@ Yes, you can use the following PHP function from your template files.
 
 = I want more control over when to show the sharing options =
 
-Use the `dvkss_display` filter to show the links in more places. 
+Use the `dvkss_display` filter to show the links in more places.
 
 *Example 1: will add the sharing links to everything possible*
 
@@ -118,9 +120,9 @@ The texts for the different links. Defaults to the string set in the translation
 
 == Screenshots ==
 
-1. Simple but beautiful sharing links add the end of your posts. 
+1. Simple but beautiful sharing links add the end of your posts.
 2. Disable the default plugin CSS to create your own styles.
-2. The settings page of the plugin. 
+2. The settings page of the plugin.
 
 == Installation ==
 
@@ -135,6 +137,48 @@ The texts for the different links. Defaults to the string set in the translation
 Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk-social-sharing/faq/) section for some examples of additional customization.
 
 == Changelog ==
+
+= 1.2.5 - January 26, 2015 =
+
+**Improvements**
+
+- Minor improvements to pop-up script
+
+**Additions**
+
+- Added Finnish (fi_FI) translations, thanks to [Ari-Pekka Koponen](http://versi.fi/)
+
+
+= 1.2.4 - November 17, 2014 =
+
+**Improvements**
+
+- Wrapped link text in element so it can be hidden using CSS
+- Improvements to pop-up JavaScript
+
+= 1.2.3 - September 4, 2014 =
+
+**Improvements**
+
+- Added minified scripts and option to load minified version
+- Some textual improvements
+
+= 1.2.2 - April 30, 2014 =
+
+**Fixes**
+
+- Fixed not being able to save all "auto add to .." checkboxes unchecked
+
+= 1.2.1 - April 29, 2014 =
+**Additions**
+
+- Added German translations, thanks Andreas Kuhl!
+
+**Improvements**
+
+- Wrapped non-translatable strings in translation calls.
+- Updated Dutch translations
+
 = 1.2 - March 19, 2014 =
 **Additions**
 
@@ -146,7 +190,7 @@ Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk
 - Disabled Pop-up JS by default until we figure out a cross-browser compatibility fix.
 
 = 1.1 - February 19, 2014 =
-- Added: Slovenian translations, thanks to [Domen Hrabar, Viking Marketing](http://www.vikingmarketing.si/) 
+- Added: Slovenian translations, thanks to [Domen Hrabar, Viking Marketing](http://www.vikingmarketing.si/)
 - Improved: direct file access security
 
 
@@ -179,7 +223,7 @@ Have a look at the [frequently asked questions](http://wordpress.org/plugins/dvk
 = 1.0.1 - November 20, 2013 =
 
 - Fixed: Added settings link to plugins overview page
-- Fixed: "tweet about" option in admin now tweets about the correct plugin. 
+- Fixed: "tweet about" option in admin now tweets about the correct plugin.
 
 = 1.0 - November 17, 2013 =
 

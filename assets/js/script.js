@@ -1,30 +1,33 @@
-function DVKSS() {
+(function() {
+	'use strict';
 
-	function addEvent(element, eventName, callback) {
-		if (element.addEventListener) {
-			element.addEventListener(eventName, callback, false);
-		} else {
-			element.attachEvent("on" + eventName, callback);
+	/**
+	 * Initialises the Social Sharing plugin
+	 */
+	function initSocialSharing() {
+
+		var links;
+
+		links = document.querySelectorAll('.dvk-social-sharing a');
+		for (var i = 0; i < links.length; i++) {
+			addEvent(links[i], 'click', openPopup);
 		}
+
 	}
 
-	// init
-	function init() {
-		var links = document.querySelectorAll('.dvk-social-sharing a');
-	    for (var i = 0; i < links.length; i++) {
-			DVKSS.addEvent(links[i], 'click', DVKSS.popup)
-	    }
-	}
-
-	// functions
+	/**
+	 * Open a popup
+	 *
+	 * @param e
+	 * @returns {boolean}
+	 */
 	function openPopup(e) {
+
 		var top = (screen.availHeight - 500) / 2;
 		var left = (screen.availWidth - 500) / 2;
-		var e = (e ? e : window.event);
-        var target = (e.target ? e.target : e.srcElement);
 
 		var popup = window.open(
-			target.href, 
+			this.href,
 			'social',
 			'width=550,height=420,left='+ left +',top='+ top +',location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1'
 		);
@@ -38,13 +41,21 @@ function DVKSS() {
 		return true;
 	}
 
-	// public stuff
-	return {
-		init: init,
-		popup: openPopup,
-		addEvent: addEvent
+	/**
+	 * Add event, compatible with IE.
+	 *
+	 * @param element
+	 * @param eventName
+	 * @param callback
+	 */
+	function addEvent(element, eventName, callback) {
+		if (element.addEventListener) {
+			element.addEventListener(eventName, callback, false);
+		} else {
+			element.attachEvent("on" + eventName, callback);
+		}
 	}
-}
 
-var DVKSS = new DVKSS();
-DVKSS.addEvent(window, 'load', DVKSS.init)
+	addEvent(window, 'load', initSocialSharing);
+
+})();

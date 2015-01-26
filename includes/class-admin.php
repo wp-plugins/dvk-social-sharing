@@ -12,20 +12,24 @@ class DVKSS_Admin {
 	* @var int
 	*/ 
 	private $code_version = 1;
+
+	/**
+	 * @var string
+	 */
+	private $slug = 'dvk-social-sharing/index.php';
 	
 	/**
 	* Constructor
 	*/ 
 	public function __construct() {
 
-		if( $this->code_version > get_option( 'dvkss_code_version', 0) ) {
-			$this->upgrade();
-		}
+		// maybe run upgrade routine
+		$this->upgrade_routine();
 
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
 		add_action( 'admin_menu', array( $this, 'add_menu_item' ) );
 
-		add_filter( "plugin_action_links_dvk-social-sharing/index.php", array( $this, 'add_settings_link' ) );
+		add_filter( "plugin_action_links_{$this->slug}", array( $this, 'add_settings_link' ) );
 
 		if ( isset( $_GET['page'] ) && $_GET['page'] === 'dvkss' ) {
 			// load css
@@ -33,29 +37,38 @@ class DVKSS_Admin {
 		}
 	}
 
-	public function upgrade() {
+	/**
+	 * Upgrade routine
+	 *
+	 * @return bool
+	 */
+	public function upgrade_routine() {
+
+		// only run if code version is higher than stored code version
+		$db_version = absint( get_option( 'dvkss_code_version', 0  ) );
+		if( $this->code_version <= $db_version ) {
+			return false;
+		}
 
 		$opts = dvkss_get_options();
 
-		if( isset( $opts['auto_add'] ) ) {
-
-			if( $opts['auto_add'] ) {
-				$opts['auto_add_post_types'][] = 'post';
-				unset( $opts['auto_add'] );
-			}
-
+		if( isset( $opts['auto_add'] ) && $opts['auto_add'] ) {
+			$opts['auto_add_post_types'][] = 'post';
+			unset( $opts['auto_add'] );
 		}
 
 		update_option( 'dvk_social_sharing', $opts );
 		update_option( 'dvkss_code_version', $this->code_version );
+		return true;
 	}
 
 	/**
 	* Load admin scripts and stylesheets
 	*/
 	public function load_css() {
-		wp_enqueue_style( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/admin-styles.css'  );
-		wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/admin-script.js', array( 'jquery' ), DVKSS_VERSION , true );
+		$suffix = ( defined( SCRIPT_DEBUG ) && SCRIPT_DEBUG ) ? '' : '.min';
+		wp_enqueue_style( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/css/admin-styles' . $suffix .'.css'  );
+		wp_enqueue_script( 'dvk-social-sharing', DVKSS_PLUGIN_URL . 'assets/js/admin-script' . $suffix .'.js', array( 'jquery' ), DVKSS_VERSION , true );
 	}
 
 	/**
@@ -76,6 +89,7 @@ class DVKSS_Admin {
 		$settings['before_text'] = strip_tags( $settings['before_text'], '<a><br><strong><i><em><b><span>' );
 		$settings['icon_size'] = trim( absint( $settings['icon_size'] ) );
 		$settings['twitter_username'] = trim( strip_tags( $settings['twitter_username'] ) );
+		$settings['auto_add_post_types'] = ( isset( $settings['auto_add_post_types'] ) ) ? $settings['auto_add_post_types'] : array();
 
 		return $settings;
 	}

@@ -28,7 +28,6 @@ function dvk_social_sharing( $args = array() ) {
 	// create final arguments array
 	$args = wp_parse_args( $args, $defaults );
 	$args['social_options'] = array_filter( array_map( 'trim', explode( ',', $args['social_options'] ) ) );
-	extract( $args );
 
 	$title = urlencode( get_the_title() );
 	$url = urlencode( get_permalink() );
@@ -36,24 +35,28 @@ function dvk_social_sharing( $args = array() ) {
 	ob_start();
 	?>
 	<!-- Social Sharing By Danny v<?php echo DVKSS_VERSION; ?> - http://wordpress.org/plugins/dvk-social-sharing/ -->
-    <<?php echo $element; ?> class="dvk-social-sharing">
-        <span class="ss-ask"><?php echo $before_text; ?></span>
-        <?php foreach($social_options as $o) {
+    <<?php echo $args['element']; ?> class="dvk-social-sharing">
+
+        <?php if( ! empty( $args['before_text'] ) ) { ?>
+			<span class="ss-ask"><?php echo $args['before_text']; ?></span>
+		<?php } ?>
+
+        <?php foreach($args['social_options'] as $o) {
         	switch($o) {
         		case 'twitter':
-        			?><a rel="external nofollow" class="ss-twitter" href="http://twitter.com/intent/tweet/?text=<?php echo $title; ?>&url=<?php echo $url; ?><?php if(!empty($twitter_username)) {  echo '&via=' . $twitter_username; } ?>" target="_blank"><span class="ss-icon-twitter"></span><?php echo $twitter_text; ?></a> <?php
+        			?><a rel="external nofollow" class="ss-twitter" href="http://twitter.com/intent/tweet/?text=<?php echo $title; ?>&url=<?php echo $url; ?><?php if( ! empty( $args['twitter_username'] ) ) {  echo '&via=' . sanitize_text_field( $args['twitter_username'] ); } ?>" target="_blank"><span class="ss-icon-twitter"></span><span class="ss-text"><?php echo $args['twitter_text']; ?></span></a> <?php
         		break;
 
         		case 'facebook':
-        			?><a rel="external nofollow" class="ss-facebook" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo $url; ?>&p[title]=<?php echo $title; ?>" target="_blank" ><span class="ss-icon-facebook"></span><?php echo $facebook_text; ?></a> <?php
+        			?><a rel="external nofollow" class="ss-facebook" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo $url; ?>&p[title]=<?php echo $title; ?>" target="_blank" ><span class="ss-icon-facebook"></span><span class="ss-text"><?php echo $args['facebook_text']; ?></span></a> <?php
         		break;
 
         		case 'googleplus':
-        			?><a rel="external nofollow" class="ss-googleplus" href="https://plus.google.com/share?url=<?php echo $url; ?>" target="_blank" ><span class="ss-icon-googleplus"></span><?php echo $googleplus_text; ?></a> <?php
+        			?><a rel="external nofollow" class="ss-googleplus" href="https://plus.google.com/share?url=<?php echo $url; ?>" target="_blank" ><span class="ss-icon-googleplus"></span><span class="ss-text"><?php echo $args['googleplus_text']; ?></span></a> <?php
         		break;
         	}
         } ?>
-    </<?php echo $element; ?>>
+    </<?php echo $args['element']; ?>>
     <!-- / Social Sharing By Danny -->
    <?php
   	$output = ob_get_contents();
